@@ -77,7 +77,7 @@ Incluye evidencias, comandos utilizados, configuración del firewall y pruebas d
    ```bash
    sudo nft add rule inet filter input tcp dport 30000-31000 accept
 
-8. ** Reinicio del servicio**
+8. **Reinicio del servicio**
    ```bash
    sudo systemctl restart vsftpd
    sudo systemctl status vsftpd
