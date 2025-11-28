@@ -20,17 +20,21 @@ Incluye evidencias, comandos utilizados, configuración del firewall y pruebas d
    sudo apt install vsftpd
 
 2. **Configuración básica del servicio**
+   ```bash
    sudo systemctl enable vsftpd
    sudo systemctl start vsftpd
 
 3. **Creación del usuario FTP**
+   ```bash
    sudo adduser ftp_user
 
 4. **Configuración del firewall con nftables**
+   ```bash
    sudo nft add rule inet filter input tcp dport 21 accept
 
 
 5. **Habilitación del modo pasivo**
+   ```bash
    pasv_enable=YES
    pasv_min_port=30000
    pasv_max_port=31000
