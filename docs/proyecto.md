@@ -20,8 +20,7 @@ Incluye evidencias, comandos utilizados, configuración del firewall y pruebas d
    sudo systemctl enable --now vsftpd
    sudo systemctl status vsftpd
 
-
-2. **Configuración del firewall**
+2. **Configuración del firewall**  
    Edición de /etc/nftables.conf:
    ```bash
    table inet filter {
@@ -41,19 +40,17 @@ Incluye evidencias, comandos utilizados, configuración del firewall y pruebas d
   	}
    }
 
-
 3. **Aplicación de reglas**
    ```bash
    sudo systemctl restart nftables
    sudo nft list ruleset
 
-
 4. **Configuración segura de vsftpd**
    ```bash
    sudo cp /etc/vsftpd.conf /etc/vsftpd.conf.bak
-   sudo nano /etc/vsftpd.conf
-   ```bash
-   **Opciones clave:**
+   sudo nano /etc/vsftpd.con
+ 
+   Opciones clave:
    listen=YES
    listen_ipv6=NO
    anonymous_enable=NO
@@ -62,7 +59,6 @@ Incluye evidencias, comandos utilizados, configuración del firewall y pruebas d
    chroot_local_user=YES
    allow_writeable_chroot=YES
 
-
 5. **Creación del usuario FTP y carpeta de pruebas**
    ```bash
    sudo useradd -m ftp_user
@@ -70,14 +66,12 @@ Incluye evidencias, comandos utilizados, configuración del firewall y pruebas d
    sudo mkdir /home/ftp_user/ftp_pruebas
    sudo chown ftp_user:ftp_user /home/ftp_user/ftp_pruebas
 
-
 6. **Habilitación del modo pasivo**
    ```bash
    pasv_enable=YES
    pasv_min_port=30000
    pasv_max_port=31000
    pasv_address=192.168.1.35
-
 
 7. **Apertura del rango en el firewall**
    ```bash
