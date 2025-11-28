@@ -7,6 +7,6 @@ Forma parte de la práctica del módulo de Despliegue de Aplicaciones Web.
 
 | NOMBRE PROYECTO        | DESCRIPCIÓN                              |
 |------------------------|------------------------------------------|
-| Documenta Servidor FTP | [Enlace al repositorio](https://github.com/tu_usuario/daw) |
+| Documenta Servidor FTP | [Enlace al repositorio](https://github.com/josriubon/daw) |
 
 
