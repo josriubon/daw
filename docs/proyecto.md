@@ -44,4 +44,5 @@ Incluye evidencias, comandos utilizados, configuración del firewall y pruebas d
 
 
 6. **Reinicio del servicio**
+   ```bash
    sudo systemctl restart vsftpd
